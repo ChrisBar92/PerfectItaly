@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+button,
+input {
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+body {
+  background-color: #fff;
+  height: 200vh;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 7rem 2rem;
+}
+
+.container {
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.activeLink .nav__link {
+  color: red;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7rem;
+  width: 100%;
+  z-index: 100;
+  background-color: #000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.nav {
+  position: relative;
+  height: 100%;
+  justify-content: space-between;
+}
+.nav__logo-text {
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 4rem;
+  font-family: "Raleway", sans-serif;
+}
+.nav__logo-text--first {
+  color: green;
+}
+.nav__logo-text--second {
+  color: #fff;
+}
+.nav__logo-text--third {
+  color: red;
+}
+.nav__item {
+  margin: 0 0.5rem;
+}
+.nav__item :hover {
+  border-bottom: 1px solid #fff;
+}
+.nav__link {
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: #fff;
+  border-bottom: 1px solid #000;
+  transition: border-bottom 0.5s, color 0.5s, transform 0.5s;
+}/*# sourceMappingURL=main.css.map */

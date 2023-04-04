@@ -1,0 +1,110 @@
+@use 'variables.scss';
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body,
+button,
+input {
+	font-size: variables.$normal-font;
+	font-weight: variables.$font-regular;
+	font-family: 'Poppins', sans-serif;
+	color: variables.$black-color;
+}
+
+body {
+	background-color: variables.$white-color;
+	height: 200vh;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+li {
+	list-style: none;
+}
+
+.section {
+	padding: 7rem 2rem;
+}
+
+.container {
+	max-width: 120rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 3rem;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.activeLink {
+	.nav__link {
+		color: variables.$red-color;
+	}
+}
+
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 7rem;
+	width: 100%;
+	z-index: 100;
+	background-color: variables.$black-color;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.nav {
+	position: relative;
+	height: 100%;
+	justify-content: space-between;
+
+	&__logo-text {
+		padding: 1rem;
+		font-weight: variables.$font-semi-bold;
+		font-size: variables.$big-font;
+		font-family: 'Raleway', sans-serif;
+
+		&--first {
+			color: variables.$green-color;
+		}
+		&--second {
+			color: variables.$white-color;
+		}
+		&--third {
+			color: variables.$red-color;
+		}
+	}
+
+	&__item {
+		margin: 0 0.5rem;
+		:hover {
+			border-bottom: 1px solid variables.$white-color;
+		}
+	}
+
+	&__link {
+		font-size: 1.6rem;
+		padding: 1rem;
+		color: variables.$white-color;
+		border-bottom: 1px solid variables.$black-color;
+		transition: border-bottom 0.5s, color 0.5s, transform 0.5s;
+	}
+
+	}
