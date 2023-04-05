@@ -14,6 +14,9 @@
         rel="stylesheet">
     <!-- boxicons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- css -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -25,7 +28,7 @@
                         class="nav__logo-text--second">ect</span><span class="nav__logo-text--third">Italy</span></p>
             </a>
 
-            <ul class="nav__list flex">
+            <ul class="nav__list--mobile flex">
                 <li class="nav__item"><a href="#rzym" class="nav__link">Rzym</a></li>
                 <li class="nav__item activeLink"><a href="#neapol" class="nav__link">Neapol</a></li>
                 <li class="nav__item"><a href="#amalfi" class="nav__link">Amalfi</a></li>
@@ -33,8 +36,72 @@
                 <li class="nav__item"><a href="#needtosee" class="nav__link">Trzeba zobaczyć</a></li>
                 <li class="nav__item"><a href="#tips" class="nav__link">Wskazówki</a></li>
             </ul>
+
+            <ul class="nav__list--desktop flex">
+                <li class="nav__item"><a href="#rzym" class="nav__link">Rzym</a></li>
+                <li class="nav__item activeLink"><a href="#neapol" class="nav__link">Neapol</a></li>
+                <li class="nav__item"><a href="#amalfi" class="nav__link">Amalfi</a></li>
+                <li class="nav__item"><a href="#procida" class="nav__link">Procida</a></li>
+                <li class="nav__item"><a href="#needtosee" class="nav__link">Trzeba zobaczyć</a></li>
+                <li class="nav__item"><a href="#tips" class="nav__link">Wskazówki</a></li>
+            </ul>
+
+            <button class="nav__burger">
+                <i class='bx bx-menu'></i>
+                <i class="bx bx-x hide"></i>
+            </button>
         </nav>
     </header>
+
+    <main>
+        <section class="section home" id="home">
+            <div class="home__container">
+                <h1 class="home__header">Perfect Italy</h1>
+                <p class="home__text">Krótki poradnik jak szybko zakochać się we Włoszech</p>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="swiper-slide--big" src="/images/rzym-tyber1920.jpg"
+                                alt="widok na Tyber i panoramę Rzymu">
+                            <img class="swiper-slide--small" src="/images/rzym-tyber640.jpg"
+                                alt="widok na Tyber i panoramę Rzymu">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide--big" src="/images/neapol-qs1920.jpg"
+                                alt="Dzielnica Quartieri Spagnoli">
+                            <img class="swiper-slide--small" src="/images/neapol-qs640.jpg"
+                                alt="Dzielnica Quartieri Spagnoli">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide--big" src="/images/amalfi1920.jpg"
+                                alt="panorama wybrzeża Amalfitańskiego">
+                            <img class="swiper-slide--small" src="/images/amalfi640.jpg"
+                                alt="panorama wybrzeża Amalfitańskiego">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="swiper-slide--big" src="/images/procida1920.jpg" alt="panorama Procidy">
+                            <img class="swiper-slide--small" src="/images/procida640.jpg" alt="panorama Procidy">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section rome" id="rome"></section>
+        <section class="section napoli" id="napoli"></section>
+        <section class="section amalfi" id="amalfi"></section>
+        <section class="section procida" id="procida"></section>
+
+
+    </main>
+
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- main.js -->
+    <script src="main.js"></script>
 </body>
 
 </html>

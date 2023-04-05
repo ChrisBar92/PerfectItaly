@@ -1,4 +1,14 @@
-@use 'variables.scss';
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+
+$black-color: #000;
+$text-color-light: #888682;
+$border-color: #484848;
+$white-color: #fff;
+$green-color: rgb(0, 100, 0);
+$red-color: rgb(230, 0, 0);
+$section-bg: #ddd;
 
 *,
 *::after,
@@ -10,19 +20,20 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body,
 button,
 input {
-	font-size: variables.$normal-font;
-	font-weight: variables.$font-regular;
+	font-size: 1.6rem;
+	font-weight: $font-regular;
 	font-family: 'Poppins', sans-serif;
-	color: variables.$black-color;
+	color: $black-color;
 }
 
 body {
-	background-color: variables.$white-color;
+	background-color: $white-color;
 	height: 200vh;
 }
 
@@ -40,10 +51,9 @@ li {
 }
 
 .container {
-	max-width: 120rem;
+	max-width: 140rem;
 	width: 100%;
 	margin: 0 auto;
-	padding: 0 3rem;
 }
 
 .flex {
@@ -51,9 +61,13 @@ li {
 	align-items: center;
 }
 
+.hide {
+	display: none;
+}
+
 .activeLink {
 	.nav__link {
-		color: variables.$red-color;
+		color: $red-color;
 	}
 }
 
@@ -63,10 +77,10 @@ li {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 7rem;
+	height: 10rem;
 	width: 100%;
 	z-index: 100;
-	background-color: variables.$black-color;
+	background-color: $black-color;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
@@ -74,37 +88,281 @@ li {
 	position: relative;
 	height: 100%;
 	justify-content: space-between;
+	padding: 2rem;
 
 	&__logo-text {
-		padding: 1rem;
-		font-weight: variables.$font-semi-bold;
-		font-size: variables.$big-font;
+		font-weight: $font-semi-bold;
+		font-size: 3rem;
 		font-family: 'Raleway', sans-serif;
 
 		&--first {
-			color: variables.$green-color;
+			color: $green-color;
 		}
 		&--second {
-			color: variables.$white-color;
+			color: $white-color;
 		}
 		&--third {
-			color: variables.$red-color;
+			color: $red-color;
 		}
 	}
 
-	&__item {
-		margin: 0 0.5rem;
-		:hover {
-			border-bottom: 1px solid variables.$white-color;
+	&__list {
+		&--desktop {
+			display: none;
+		}
+
+		&--mobile {
+			row-gap: 6rem;
+			position: fixed;
+			flex-direction: column;
+			justify-content: center;
+			top: 0;
+			right: -100%;
+			max-width: 30rem;
+			width: 100%;
+			height: 100%;
+			padding: 10rem 0;
+			background-color: $white-color;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+			z-index: 10;
+			transition: all 1s;
 		}
 	}
 
 	&__link {
-		font-size: 1.6rem;
-		padding: 1rem;
-		color: variables.$white-color;
-		border-bottom: 1px solid variables.$black-color;
+		padding: 1rem 3rem;
+		font-size: 2rem;
+		color: $black-color;
+		border-bottom: 1px solid $black-color;
 		transition: border-bottom 0.5s, color 0.5s, transform 0.5s;
 	}
 
+	&__burger {
+		display: flex;
+		padding: 1rem;
+		font-size: 2rem;
+		color: $black-color;
+		background-color: $white-color;
+		border: 1px solid $black-color;
+		border-radius: 10px;
+		z-index: 20;
+		cursor: pointer;
+		transition: background-color 3s;
 	}
+}
+
+.show-navigation {
+	right: 0;
+}
+
+.home {
+	height: 100vh;
+	width: 100%;
+	padding: 10rem 0 0;
+	background-color: $section-bg;
+
+	&__container {
+		position: relative;
+		height: 100%;
+		max-width: 140rem;
+		margin: 0 auto;
+	}
+
+	&__header,
+	&__text {
+		position: absolute;
+		top: 15%;
+		left: 50%;
+		width: 80%;
+		transform: translate(-50%, -50%);
+		color: $white-color;
+		font-size: 3.6rem;
+		font-weight: $font-semi-bold;
+		font-family: 'Raleway', sans-serif;
+		text-align: center;
+		z-index: 20;
+		animation: blur-text 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) reverse both;
+	}
+
+	&__text {
+		top: 30%;
+		font-size: 2rem;
+		animation-delay: 1s;
+	}
+
+	.swiper {
+		width: 100%;
+		height: 100%;
+
+		&-slide {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.8rem;
+			text-align: center;
+
+			&--small {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&--big {
+				display: none;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}
+
+		&-button-next,
+		&-button-prev {
+			height: 6rem;
+			width: 6rem;
+			background-color: rgba(255, 255, 255, 0.3);
+			color: $white-color;
+			border-radius: 50%;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.6);
+			}
+
+			&::after,
+			&::before {
+				font-size: 3rem;
+			}
+		}
+
+		&-pagination-bullet-active {
+			background-color: $white-color;
+		}
+	}
+}
+
+@media screen and (min-width: 300px) {
+	.nav {
+		padding: 3rem;
+	}
+
+	.home {
+		&__text {
+			top: 28%;
+			font-size: 2.4rem;
+		}
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.nav {
+		&__logo-text {
+			font-size: 3.6rem;
+			
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		height: 12rem;
+	}
+
+	.nav {
+		&__logo-text {
+			font-size: 4rem;
+		}
+
+		&__burger {
+			font-size: 2.4rem;
+		}
+	}
+
+	.home {
+		padding-top: 12rem;
+
+		&__header {
+			top: 20%;
+		}
+
+		.swiper {
+			&-slide {
+				&--big {
+					display: block;
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+
+				&--small {
+					display: none;
+				}
+			}
+
+			&-button-next,
+			&-button-prev {
+				height: 7rem;
+				width: 7rem;
+				margin: -2rem 3rem;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.nav {
+		&__list {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: flex;
+			}
+		}
+
+		&__burger {
+			display: none;
+		}
+
+		&__item {
+			margin: 0 0.5rem;
+			:hover {
+				border-bottom: 1px solid $white-color;
+			}
+		}
+
+		&__link {
+			padding: 1rem;
+			font-size: 1.6rem;
+			color: $white-color;
+			border-bottom: 1px solid $black-color;
+		}
+	}
+
+	.home {
+		&__header {
+			font-size: 4.6rem;
+		}
+
+		&__text {
+			font-size: 3rem;
+		}
+	}
+}
+
+@keyframes blur-text {
+	0% {
+		filter: blur(0.01);
+	}
+	100% {
+		filter: blur(12px) opacity(0);
+	}
+}
