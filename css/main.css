@@ -21,7 +21,8 @@ input {
 }
 
 body {
-  background-color: #fff;
+  position: relative;
+  background-color: #eee;
   height: 200vh;
 }
 
@@ -32,10 +33,6 @@ a {
 
 li {
   list-style: none;
-}
-
-.section {
-  padding: 7rem 2rem;
 }
 
 .container {
@@ -53,15 +50,28 @@ li {
   display: none;
 }
 
-.activeLink .nav__link {
-  color: rgb(230, 0, 0);
+.white-block {
+  position: absolute;
+  height: 4rem;
+  width: 60%;
+  background-color: #eee;
+}
+.white-block-left {
+  bottom: 0;
+  left: -5rem;
+  transform: skew(45deg);
+}
+.white-block-right {
+  top: 0;
+  right: -5rem;
+  transform: skew(45deg);
 }
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  height: 10rem;
+  height: 5rem;
   width: 100%;
   z-index: 100;
   background-color: #000;
@@ -135,13 +145,10 @@ li {
   height: 100vh;
   width: 100%;
   padding: 10rem 0 0;
-  background-color: #ddd;
 }
 .home__container {
   position: relative;
   height: 100%;
-  max-width: 140rem;
-  margin: 0 auto;
 }
 .home__header, .home__text {
   position: absolute;
@@ -210,6 +217,328 @@ li {
   background-color: #fff;
 }
 
+.rome,
+.naples,
+.amalfi,
+.procida {
+  padding: 5rem 0 0;
+}
+.rome__container,
+.naples__container,
+.amalfi__container,
+.procida__container {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100rem;
+}
+.rome__box,
+.naples__box,
+.amalfi__box,
+.procida__box {
+  position: relative;
+  width: 100%;
+}
+.rome__box--first,
+.naples__box--first,
+.amalfi__box--first,
+.procida__box--first {
+  height: 60vh;
+}
+.rome__box--second,
+.naples__box--second,
+.amalfi__box--second,
+.procida__box--second {
+  padding: 3rem 2rem;
+}
+.rome__box-header,
+.naples__box-header,
+.amalfi__box-header,
+.procida__box-header {
+  padding-bottom: 2rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.rome__box-description,
+.naples__box-description,
+.amalfi__box-description,
+.procida__box-description {
+  font-size: 1.3rem;
+  text-align: justify;
+  font-weight: 500;
+}
+.rome__box-img,
+.naples__box-img,
+.amalfi__box-img,
+.procida__box-img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rome__box-img--big,
+.naples__box-img--big,
+.amalfi__box-img--big,
+.procida__box-img--big {
+  display: none;
+}
+.rome__box-content,
+.naples__box-content,
+.amalfi__box-content,
+.procida__box-content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  border: 3px solid #000;
+  background-color: rgba(238, 238, 238, 0.7);
+}
+.rome__box-content-text,
+.naples__box-content-text,
+.amalfi__box-content-text,
+.procida__box-content-text {
+  position: relative;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.rome__box-content-text .bx-heart,
+.naples__box-content-text .bx-heart,
+.amalfi__box-content-text .bx-heart,
+.procida__box-content-text .bx-heart {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.hero-img {
+  position: relative;
+  padding: 20rem 2rem;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.hero-img__rome {
+  background-image: url("/images/rzym-paralaksa1920.jpg");
+}
+.hero-img__naples {
+  background-image: url("/images/neapol-qs1920.jpg");
+}
+.hero-img__amalfi {
+  background-image: url("/images/amalfi-miasto1920.jpg");
+}
+.hero-img__procida {
+  background-image: url("/images/procida-miasto1920.jpg");
+}
+.hero-img__title {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 1rem;
+  line-height: 3.5rem;
+  font-size: 2.6rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.hero-img__text {
+  padding: 1em 0;
+}
+
+.needtosee {
+  width: 100%;
+  padding: 5rem 2rem;
+}
+.needtosee__container {
+  width: 100%;
+  max-width: 140rem;
+}
+.needtosee__title {
+  padding-bottom: 4rem;
+  text-align: center;
+}
+.needtosee__text {
+  text-align: justify;
+  font-size: 1.4rem;
+}
+.needtosee__card {
+  position: relative;
+  max-width: 35rem;
+  height: 45rem;
+  margin: 3rem auto;
+  color: #fff;
+  text-align: center;
+  perspective: 100rem;
+}
+.needtosee__card:hover .needtosee__card-img {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+.needtosee__card:hover .needtosee__card-info {
+  transform: rotateY(0);
+  opacity: 1;
+}
+.needtosee__card-img {
+  height: 100%;
+  padding: 2rem;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: bottom;
+  transition: transform 1s, opacity 1s;
+}
+.needtosee__card-img--rome {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%), url("../images/oltarz-narodow.jpg");
+}
+.needtosee__card-img--naples {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%), url("../images/wezuwiusz.jpg");
+}
+.needtosee__card-img--amalfi {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%), url("../images/positano.jpg");
+}
+.needtosee__card-img--procida {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%), url("../images/zamek.jpg");
+}
+.needtosee__card-img-title {
+  font-weight: 600;
+  font-size: 2.6rem;
+  font-family: "Raleway", sans-serif;
+}
+.needtosee__card-img-info {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 1.4rem;
+}
+.needtosee__card-img-info i {
+  margin-right: 0.3rem;
+}
+.needtosee__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+  background-size: cover;
+}
+.needtosee__card-info--rome {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%), url("../images/fontanna.jpg");
+}
+.needtosee__card-info--naples {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 74%), url("../images/pompeje.jpg");
+}
+.needtosee__card-info--amalfi {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 74%), url("../images/kosciol.jpg");
+}
+.needtosee__card-info--procida {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 74%), url("../images/capri.jpg");
+}
+.needtosee__card-info-title {
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 2.6rem;
+  font-family: "Raleway", sans-serif;
+}
+.needtosee__card-info-list {
+  width: 70%;
+  margin: 0 auto;
+}
+.needtosee__card-info-list-item {
+  padding: 1rem;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #fff;
+}
+.needtosee__card-info-list-item:last-child {
+  border-bottom: none;
+}
+
+.tips {
+  position: relative;
+  width: 100%;
+  padding: 7rem 2rem 5rem;
+  background-color: #ddd;
+  overflow: hidden;
+}
+.tips__container {
+  max-width: 120rem;
+}
+.tips__header {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.tips__text {
+  max-width: 100rem;
+  margin: 0 auto;
+  text-align: justify;
+  padding-bottom: 5rem;
+  font-size: 1.4rem;
+}
+.tips__box {
+  width: 50%;
+  height: 100%;
+  background-color: #f00;
+}
+.tips__content {
+  width: 100%;
+  max-width: 120rem;
+  display: flex;
+  align-items: center;
+}
+.tips__tip {
+  width: 100%;
+  max-width: 40rem;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 5rem;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #2e2e2e;
+  transition: transform 0.3s;
+}
+.tips__tip:hover {
+  transform: scale(0.95);
+}
+.tips .scroll-up {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  color: #000;
+  background-color: #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 1.5rem;
+}
+.tips .scroll-up i {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 300px) {
   .nav {
     padding: 3rem;
@@ -218,10 +547,109 @@ li {
     top: 28%;
     font-size: 2.4rem;
   }
+  .rome__box-content-text,
+  .naples__box-content-text,
+  .amalfi__box-content-text,
+  .procida__box-content-text {
+    padding: 2rem;
+    font-size: 1.4rem;
+  }
+  .rome__box-header,
+  .naples__box-header,
+  .amalfi__box-header,
+  .procida__box-header {
+    font-size: 1.8rem;
+  }
+  .rome__box-description,
+  .naples__box-description,
+  .amalfi__box-description,
+  .procida__box-description {
+    font-size: 1.4rem;
+  }
+  .rome .needtosee__title,
+  .naples .needtosee__title,
+  .amalfi .needtosee__title,
+  .procida .needtosee__title {
+    font-size: 2.6rem;
+  }
+  .rome .needtosee__text,
+  .naples .needtosee__text,
+  .amalfi .needtosee__text,
+  .procida .needtosee__text {
+    font-size: 1.4rem;
+  }
+  .rome .needtosee__card-img-title, .rome .needtosee__card-info-title,
+  .naples .needtosee__card-img-title,
+  .naples .needtosee__card-info-title,
+  .amalfi .needtosee__card-img-title,
+  .amalfi .needtosee__card-info-title,
+  .procida .needtosee__card-img-title,
+  .procida .needtosee__card-info-title {
+    font-size: 3rem;
+  }
+  .rome .needtosee__card-img-info,
+  .naples .needtosee__card-img-info,
+  .amalfi .needtosee__card-img-info,
+  .procida .needtosee__card-img-info {
+    font-size: 1.6rem;
+  }
 }
 @media screen and (min-width: 576px) {
   .nav__logo-text {
     font-size: 3.6rem;
+  }
+  .rome__box--second,
+  .naples__box--second,
+  .amalfi__box--second,
+  .procida__box--second {
+    padding: 4rem 3rem;
+  }
+  .rome__box-header,
+  .naples__box-header,
+  .amalfi__box-header,
+  .procida__box-header {
+    font-size: 2rem;
+  }
+  .rome__box-description,
+  .naples__box-description,
+  .amalfi__box-description,
+  .procida__box-description {
+    font-size: 1.6rem;
+  }
+  .rome__box-content,
+  .naples__box-content,
+  .amalfi__box-content,
+  .procida__box-content {
+    width: 70%;
+  }
+  .rome__box-content-text,
+  .naples__box-content-text,
+  .amalfi__box-content-text,
+  .procida__box-content-text {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  .hero-img__title {
+    padding: 1rem 5rem;
+    font-size: 2.8rem;
+  }
+  .needtosee {
+    padding: 7rem 3rem 5rem;
+  }
+  .needtosee__title {
+    font-size: 2.6rem;
+  }
+  .needtosee__text {
+    font-size: 1.6rem;
+  }
+  .tips {
+    padding: 7rem 3rem 5rem;
+  }
+  .tips__header {
+    font-size: 2.6rem;
+  }
+  .tips__text {
+    font-size: 1.6rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -255,6 +683,54 @@ li {
     width: 7rem;
     margin: -2rem 3rem;
   }
+  .rome__box-img--small,
+  .naples__box-img--small,
+  .amalfi__box-img--small,
+  .procida__box-img--small {
+    display: none;
+  }
+  .rome__box-img--big,
+  .naples__box-img--big,
+  .amalfi__box-img--big,
+  .procida__box-img--big {
+    display: block;
+  }
+  .rome__box-header,
+  .naples__box-header,
+  .amalfi__box-header,
+  .procida__box-header {
+    font-size: 2rem;
+  }
+  .rome__box-description,
+  .naples__box-description,
+  .amalfi__box-description,
+  .procida__box-description {
+    font-size: 1.6rem;
+  }
+  .rome__box-content,
+  .naples__box-content,
+  .amalfi__box-content,
+  .procida__box-content {
+    width: 70%;
+  }
+  .rome__box-content-text,
+  .naples__box-content-text,
+  .amalfi__box-content-text,
+  .procida__box-content-text {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .needtosee__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 2rem 0;
+  }
+  .needtosee__card {
+    width: 45%;
+    max-width: 35rem;
+    margin: 3rem 1rem;
+  }
 }
 @media screen and (min-width: 992px) {
   .nav__list--mobile {
@@ -283,6 +759,71 @@ li {
   }
   .home__text {
     font-size: 3rem;
+  }
+  .rome__container,
+  .naples__container,
+  .amalfi__container,
+  .procida__container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 2rem 7rem;
+  }
+  .rome__box,
+  .naples__box,
+  .amalfi__box,
+  .procida__box {
+    width: 46%;
+  }
+  .rome__box-content,
+  .naples__box-content,
+  .amalfi__box-content,
+  .procida__box-content {
+    width: 80%;
+    right: -15%;
+  }
+  .rome__box-header,
+  .naples__box-header,
+  .amalfi__box-header,
+  .procida__box-header {
+    font-size: 2.2rem;
+    padding-bottom: 4rem;
+  }
+  .rome__box-description,
+  .naples__box-description,
+  .amalfi__box-description,
+  .procida__box-description {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+  .hero-img {
+    padding: 25rem 2rem;
+  }
+  .needtosee {
+    padding: 7rem 5rem;
+  }
+  .needtosee__text {
+    font-size: 1.8rem;
+  }
+  .needtosee__title {
+    font-size: 3rem;
+  }
+  .needtosee__container {
+    margin: 0 auto;
+    max-width: 100rem;
+  }
+  .needtosee__card {
+    max-width: 35rem;
+  }
+  .tips__header {
+    font-size: 3rem;
+  }
+  .tips__text {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .needtosee__card {
+    width: 35rem;
   }
 }
 @keyframes blur-text {

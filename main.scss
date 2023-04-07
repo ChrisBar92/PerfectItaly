@@ -1,14 +1,15 @@
+$font-light: 300;
 $font-regular: 400;
 $font-medium: 500;
 $font-semi-bold: 600;
 
 $black-color: #000;
-$text-color-light: #888682;
-$border-color: #484848;
 $white-color: #fff;
 $green-color: rgb(0, 100, 0);
 $red-color: rgb(230, 0, 0);
-$section-bg: #ddd;
+$primary-section-bg: #eee;
+$secondary-section-bg: #ddd;
+$card-bg: #333;
 
 *,
 *::after,
@@ -33,7 +34,8 @@ input {
 }
 
 body {
-	background-color: $white-color;
+	position: relative;
+	background-color: $primary-section-bg;
 	height: 200vh;
 }
 
@@ -44,10 +46,6 @@ a {
 
 li {
 	list-style: none;
-}
-
-.section {
-	padding: 7rem 2rem;
 }
 
 .container {
@@ -65,9 +63,23 @@ li {
 	display: none;
 }
 
-.activeLink {
-	.nav__link {
-		color: $red-color;
+
+.white-block {
+	position: absolute;
+	height: 4rem;
+	width: 60%;
+	background-color: $primary-section-bg;
+
+	&-left {
+		bottom: 0;
+		left: -5rem;
+		transform: skew(45deg);
+	}
+
+	&-right {
+		top: 0;
+		right: -5rem;
+		transform: skew(45deg);
 	}
 }
 
@@ -77,7 +89,7 @@ li {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height: 10rem;
+	height:5rem;
 	width: 100%;
 	z-index: 100;
 	background-color: $black-color;
@@ -159,13 +171,10 @@ li {
 	height: 100vh;
 	width: 100%;
 	padding: 10rem 0 0;
-	background-color: $section-bg;
 
 	&__container {
 		position: relative;
 		height: 100%;
-		max-width: 140rem;
-		margin: 0 auto;
 	}
 
 	&__header,
@@ -248,6 +257,371 @@ li {
 	}
 }
 
+.rome,
+.naples,
+.amalfi,
+.procida {
+	padding: 5rem 0 0;
+
+	&__container {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		max-width: 100rem;
+	}
+
+	&__box {
+		position: relative;
+		width: 100%;
+
+		&--first {
+			height: 60vh;
+		}
+
+		&--second {
+			padding: 3rem 2rem;
+		}
+
+		&-header {
+			padding-bottom: 2rem;
+			text-align: center;
+			font-size: 1.4rem;
+			font-weight: $font-semi-bold;
+		}
+
+		&-description {
+			font-size: 1.3rem;
+			text-align: justify;
+			font-weight: $font-medium;
+		}
+
+		&-img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+
+			&--big {
+				display: none;
+			}
+		}
+
+		&-content {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 80%;
+			border: 3px solid $black-color;
+			background-color: rgba($primary-section-bg, 0.7);
+
+			&-text {
+				position: relative;
+				padding: 1rem;
+				padding-left: 1.5rem;
+				font-size: 1.2rem;
+				text-align: center;
+				font-weight: bold;
+
+				.bx-heart {
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					padding: 1rem;
+					color: $white-color;
+					background-color: $black-color;
+					border-radius: 50%;
+				}
+			}
+		}
+	}
+}
+
+.hero-img {
+	position: relative;
+	padding: 20rem 2rem;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	text-align: center;
+	color: $white-color;
+	overflow: hidden;
+
+	&__rome {
+		background-image: url('/images/rzym-paralaksa1920.jpg');
+	}
+
+	&__naples {
+		background-image: url('/images/neapol-qs1920.jpg');
+	}
+
+	&__amalfi {
+		background-image: url('/images/amalfi-miasto1920.jpg');
+	}
+	&__procida {
+		background-image: url('/images/procida-miasto1920.jpg');
+	}
+
+	&__title {
+		max-width: 100rem;
+		margin: 0 auto;
+		padding: 1rem;
+		line-height: 3.5rem;
+		font-size: 2.6rem;
+		font-family: 'Raleway', sans-serif;
+		font-weight: $font-light;
+		border-top: 1px solid $white-color;
+		border-bottom: 1px solid $white-color;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	&__text {
+		padding: 1em 0;
+	}
+}
+
+.needtosee {
+	width: 100%;
+	padding: 5rem 2rem;
+
+	&__container {
+		width: 100%;
+		max-width: 140rem;
+	}
+
+	&__title {
+		padding-bottom: 4rem;
+		text-align: center;
+	}
+
+	&__text {
+		text-align: justify;
+		font-size: 1.4rem;
+	}
+
+	&__card {
+		position: relative;
+		max-width: 35rem;
+		height: 45rem;
+		margin: 3rem auto;
+		color: $white-color;
+		text-align: center;
+		perspective: 100rem;
+
+		&:hover {
+			.needtosee__card-img {
+				transform: rotateY(-180deg);
+				opacity: 0;
+			}
+			.needtosee__card-info {
+				transform: rotateY(0);
+				opacity: 1;
+			}
+		}
+
+		&-img {
+			height: 100%;
+			padding: 2rem;
+			border-radius: 10px;
+			background-size: cover;
+			background-position: bottom;
+			transition: transform 1s, opacity 1s;
+
+			&--rome {
+				background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%),
+					url('../images/oltarz-narodow.jpg');
+			}
+			&--naples {
+				background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%),
+					url('../images/wezuwiusz.jpg');
+			}
+			&--amalfi {
+				background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%),
+					url('../images/positano.jpg');
+			}
+			&--procida {
+				background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 74%),
+					url('../images/zamek.jpg');
+			}
+
+			&-title {
+				font-weight: $font-semi-bold;
+				font-size: 2.6rem;
+				font-family: 'Raleway', sans-serif;
+			}
+
+			&-info {
+				position: absolute;
+				bottom: 2rem;
+				right: 2rem;
+				font-size: 1.4rem;
+
+				i {
+					margin-right: 0.3rem;
+				}
+			}
+		}
+
+		&-info {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			border-radius: 10px;
+			transform: rotateY(180deg);
+			opacity: 0;
+			transition: transform 1s, opacity 1s;
+			background-size: cover;
+
+			&--rome {
+				background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%),
+					url('../images/fontanna.jpg');
+			}
+			&--naples {
+				background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 74%),
+					url('../images/pompeje.jpg');
+			}
+			&--amalfi {
+				background-image: linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 74%),
+					url('../images/kosciol.jpg');
+			}
+			&--procida {
+				background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 74%),
+					url('../images/capri.jpg');
+			}
+
+			&-title {
+				position: absolute;
+				top: 2rem;
+				left: 50%;
+				transform: translateX(-50%);
+				font-weight: $font-semi-bold;
+				font-size: 2.6rem;
+				font-family: 'Raleway', sans-serif;
+			}
+
+			&-list {
+				width: 70%;
+				margin: 0 auto;
+
+				&-item {
+					padding: 1rem;
+					font-size: 1.4rem;
+					border-bottom: 1px solid $white-color;
+
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tips {
+	position: relative;
+	width: 100%;
+	padding: 7rem 2rem 5rem;
+	background-color: $secondary-section-bg;
+	overflow: hidden;
+
+	&__container {
+		max-width: 120rem;
+	}
+
+	&__header {
+		max-width: 100rem;
+		margin: 0 auto;
+		padding-bottom: 3rem;
+		font-size: 2.4rem;
+		text-align: center;
+	}
+
+	&__text {
+		max-width: 100rem;
+		margin: 0 auto;
+		text-align: justify;
+		padding-bottom: 5rem;
+		font-size: 1.4rem;
+	}
+
+	&__box {
+		width: 50%;
+		height: 100%;
+		background-color: #f00;
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 120rem;
+		display: flex;
+		align-items: center;
+	}
+
+	&__tip {
+		width: 100%;
+		max-width: 40rem;
+		font-size: 1.4rem;
+		text-align: center;
+		margin-bottom: 5rem;
+		background-color: $white-color;
+		padding: 1rem;
+		border-radius: 10px;
+		box-shadow: 3px 3px 3px #2e2e2e;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(0.95);
+		}
+	}
+
+	.scroll-up {
+		position: fixed;
+		right: 2rem;
+		bottom: 2rem;
+		color: #000;
+		background-color: $primary-section-bg;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+		border: 1px solid $black-color;
+		border-radius: 50%;
+		padding: 1.5rem;
+
+		i {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+	}
+}
+// .swiper {
+// 	width: 100%;
+// 	height: 100%;
+// 	overflow: hidden;
+// }
+
+// .swiper-wrapper {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+
+// .swiper-slide {
+// 	padding: 3rem;
+// 	width: 25rem;
+// 	max-width: 30rem;
+// 	text-align: center;
+// 	font-size: 18px;
+// 	background: #fff;
+// 	margin: 0 auto;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+/////////////////////////////////////////////
+/////////////////Media QUERIES///////////////
+/////////////////////////////////////////////
 @media screen and (min-width: 300px) {
 	.nav {
 		padding: 3rem;
@@ -259,13 +633,106 @@ li {
 			font-size: 2.4rem;
 		}
 	}
+
+	.rome,
+	.naples,
+	.amalfi,
+	.procida {
+		&__box {
+			&-content-text {
+				padding: 2rem;
+				font-size: 1.4rem;
+			}
+
+			&-header {
+				font-size: 1.8rem;
+			}
+
+			&-description {
+				font-size: 1.4rem;
+			}
+		}
+
+		.needtosee {
+			&__title {
+				font-size: 2.6rem;
+			}
+
+			&__text {
+				font-size: 1.4rem;
+			}
+			&__card-img-title,
+			&__card-info-title {
+				font-size: 3rem;
+			}
+
+			&__card-img-info {
+				font-size: 1.6rem;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 576px) {
 	.nav {
 		&__logo-text {
 			font-size: 3.6rem;
-			
+		}
+	}
+
+	.rome,
+	.naples,
+	.amalfi,
+	.procida {
+		&__box {
+			&--second {
+				padding: 4rem 3rem;
+			}
+			&-header {
+				font-size: 2rem;
+			}
+
+			&-description {
+				font-size: 1.6rem;
+			}
+
+			&-content {
+				width: 70%;
+
+				&-text {
+					text-align: center;
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+
+	.hero-img__title {
+		padding: 1rem 5rem;
+		font-size: 2.8rem;
+	}
+
+	.needtosee {
+		padding: 7rem 3rem 5rem;
+
+		&__title {
+			font-size: 2.6rem;
+		}
+
+		&__text {
+			font-size: 1.6rem;
+		}
+	}
+
+	.tips {
+		padding: 7rem 3rem 5rem;
+
+		&__header {
+			font-size: 2.6rem;
+		}
+
+		&__text {
+			font-size: 1.6rem;
 		}
 	}
 }
@@ -314,6 +781,52 @@ li {
 			}
 		}
 	}
+
+	.rome,
+	.naples,
+	.amalfi,
+	.procida {
+		&__box {
+			&-img {
+				&--small {
+					display: none;
+				}
+				&--big {
+					display: block;
+				}
+			}
+			&-header {
+				font-size: 2rem;
+			}
+
+			&-description {
+				font-size: 1.6rem;
+			}
+
+			&-content {
+				width: 70%;
+				&-text {
+					font-size: 1.8rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.needtosee {
+		&__cards {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			margin: 2rem 0;
+		}
+
+		&__card {
+			width: 45%;
+			max-width: 35rem;
+			margin: 3rem 1rem;
+		}
+	}
 }
 
 @media screen and (min-width: 992px) {
@@ -354,6 +867,78 @@ li {
 
 		&__text {
 			font-size: 3rem;
+		}
+	}
+
+	.rome,
+	.naples,
+	.amalfi,
+	.procida {
+		&__container {
+			flex-direction: row;
+			justify-content: space-between;
+			padding: 2rem 2rem 7rem;
+		}
+
+		&__box {
+			width: 46%;
+
+			&-content {
+				width: 80%;
+				right: -15%;
+			}
+
+			&-header {
+				font-size: 2.2rem;
+				padding-bottom: 4rem;
+			}
+			&-description {
+				font-size: 1.8rem;
+				line-height: 2.8rem;
+			}
+		}
+	}
+
+	.hero-img {
+		padding: 25rem 2rem;
+	}
+
+	.needtosee {
+		padding: 7rem 5rem;
+
+		&__text {
+			font-size: 1.8rem;
+		}
+
+		&__title {
+			font-size: 3rem;
+		}
+
+		&__container {
+			margin: 0 auto;
+			max-width: 100rem;
+		}
+
+		&__card {
+			max-width: 35rem;
+		}
+	}
+
+	.tips {
+		&__header {
+			font-size: 3rem;
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.needtosee {
+		&__card {
+			width: 35rem;
 		}
 	}
 }

@@ -29,8 +29,8 @@
             </a>
 
             <ul class="nav__list--mobile flex">
-                <li class="nav__item"><a href="#rzym" class="nav__link">Rzym</a></li>
-                <li class="nav__item activeLink"><a href="#neapol" class="nav__link">Neapol</a></li>
+                <li class="nav__item"><a href="#rome" class="nav__link">Rzym</a></li>
+                <li class="nav__item"><a href="#naples" class="nav__link">Neapol</a></li>
                 <li class="nav__item"><a href="#amalfi" class="nav__link">Amalfi</a></li>
                 <li class="nav__item"><a href="#procida" class="nav__link">Procida</a></li>
                 <li class="nav__item"><a href="#needtosee" class="nav__link">Trzeba zobaczyć</a></li>
@@ -38,11 +38,11 @@
             </ul>
 
             <ul class="nav__list--desktop flex">
-                <li class="nav__item"><a href="#rzym" class="nav__link">Rzym</a></li>
-                <li class="nav__item activeLink"><a href="#neapol" class="nav__link">Neapol</a></li>
+                <li class="nav__item"><a href="#rome" class="nav__link">Rzym</a></li>
+                <li class="nav__item"><a href="#naples" class="nav__link">Neapol</a></li>
                 <li class="nav__item"><a href="#amalfi" class="nav__link">Amalfi</a></li>
-                <li class="nav__item"><a href="#procida" class="nav__link">Procida</a></li>
-                <li class="nav__item"><a href="#needtosee" class="nav__link">Trzeba zobaczyć</a></li>
+                <li class="nav__item"><a href="#procida" class="nav__link ">Procida</a></li>
+                <li class="nav__item activeLink"><a href="#needtosee" class="nav__link">Trzeba zobaczyć</a></li>
                 <li class="nav__item"><a href="#tips" class="nav__link">Wskazówki</a></li>
             </ul>
 
@@ -55,32 +55,32 @@
 
     <main>
         <section class="section home" id="home">
-            <div class="home__container">
+            <div class="home__container container">
                 <h1 class="home__header">Perfect Italy</h1>
                 <p class="home__text">Krótki poradnik jak szybko zakochać się we Włoszech</p>
-                <div class="swiper mySwiper">
+                <div class="swiper homeSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img class="swiper-slide--big" src="/images/rzym-tyber1920.jpg"
+                            <img class="swiper-slide--big" src="../images/rzym-tyber1920.jpg"
                                 alt="widok na Tyber i panoramę Rzymu">
-                            <img class="swiper-slide--small" src="/images/rzym-tyber640.jpg"
+                            <img class="swiper-slide--small" src="../images/rzym-tyber640.jpg"
                                 alt="widok na Tyber i panoramę Rzymu">
                         </div>
                         <div class="swiper-slide">
-                            <img class="swiper-slide--big" src="/images/neapol-qs1920.jpg"
+                            <img class="swiper-slide--big" src="../images/neapol-panorama1920.jpg"
                                 alt="Dzielnica Quartieri Spagnoli">
-                            <img class="swiper-slide--small" src="/images/neapol-qs640.jpg"
+                            <img class="swiper-slide--small" src="../images/neapol-panorama640.jpg"
                                 alt="Dzielnica Quartieri Spagnoli">
                         </div>
                         <div class="swiper-slide">
-                            <img class="swiper-slide--big" src="/images/amalfi1920.jpg"
+                            <img class="swiper-slide--big" src="../images/amalfi1920.jpg"
                                 alt="panorama wybrzeża Amalfitańskiego">
-                            <img class="swiper-slide--small" src="/images/amalfi640.jpg"
+                            <img class="swiper-slide--small" src="../images/amalfi640.jpg"
                                 alt="panorama wybrzeża Amalfitańskiego">
                         </div>
                         <div class="swiper-slide">
-                            <img class="swiper-slide--big" src="/images/procida1920.jpg" alt="panorama Procidy">
-                            <img class="swiper-slide--small" src="/images/procida640.jpg" alt="panorama Procidy">
+                            <img class="swiper-slide--big" src="../images/procida1920.jpg" alt="panorama Procidy">
+                            <img class="swiper-slide--small" src="../images/procida640.jpg" alt="panorama Procidy">
                         </div>
                     </div>
                     <div class="swiper-button-next"></div>
@@ -90,14 +90,280 @@
             </div>
         </section>
 
-        <section class="section rome" id="rome"></section>
-        <section class="section napoli" id="napoli"></section>
-        <section class="section amalfi" id="amalfi"></section>
-        <section class="section procida" id="procida"></section>
+        <section class="section rome" id="rome">
+            <div class="rome__container container flex">
+                <div class="rome__box rome__box--first flex">
+                    <img src="../images/rzym-panorama.jpg" alt="panorama na Rzym z kopuły bazyliki św.Piotra"
+                        class="rome__box-img rome__box-img--small">
+                    <img src="../images/rzym-panorama1920.jpg" alt="panorama na Rzym z kopuły bazyliki św.Piotra"
+                        class="rome__box-img rome__box-img--big">
+                    <div class="rome__box-content">
+
+                        <p class="rome__box-content-text">Jeden z piękniejszych punktów widokowych w Rzymie<i
+                                class="bx bx-heart"></i></p>
+                    </div>
+                </div>
+                <div class="rome__box rome__box--second">
+                    <h3 class="rome__box-header">Rzym, zwany Wiecznym Miastem.</h3>
+                    <p class="rome__box-description">Stolica Włoch znajdująca się w regionie Lacjum jest miastem, które
+                        nigdy się nie nudzi ze względu na niezliczoną ilość pięknych zabytków, kilkanaście świetnych
+                        punktów widokowych, przepyszne jedzenie. W granicach Rzymu leży Watykan, będący enklawą na
+                        terytorium państwowym Włoch. Wiele zabytków można zwiedzić w ciągu 4-5 dni, ale należy być
+                        przygotowanym na pokonanie każdego dnia wielu kilometrów pieszo. Efekt zobaczenia poszczególnych
+                        atrakcji, liczne fontanny i starożytna architektura, w połączeniu z pysznym jedzeniem,
+                        absolutnie
+                        wynagrodzi każdemu włożony w zwiedzanie trud i sprawi, że każdy będzie chciał tu wrócić. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-img hero-img__rome">
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+            <p class="hero-img__title">Miasto, gdzie nowoczesność miesza się ze starożytnością</p>
+        </section>
+
+        <section class="section naples" id="naples">
+            <div class="naples__container container flex">
+                <div class="naples__box naples__box--first flex">
+                    <img src="../images/neapol640.jpg" alt="widok na centrum Neapolu"
+                        class="naples__box-img naples__box-img--small">
+                    <img src="../images/neapol1920.jpg" alt="widok na centrum Neapolu"
+                        class="naples__box-img naples__box-img--big">
+
+                    <div class="naples__box-content">
+                        <p class="naples__box-content-text">Piazza Bovio. Neapol to mieszanka piękna z chaosem<i
+                                class="bx bx-heart"></i></p>
+                    </div>
+                </div>
+                <div class="naples__box naples__box--second">
+                    <h3 class="naples__box-header">Wobec Neapolu nikt nie jest obojętny.</h3>
+                    <p class="naples__box-description">Neapol leży w regionie Kampanii i jest największym miastem w tej
+                        okolicy. Osoba przyjeżdżająca tu pierwszy raz wyrobi sobie skrajną opinię o tym
+                        mieście. Nie bez powodu mówi się, że Neapol można kochać lub nienawidzić. Gdyby wrzucić razem
+                        piękne zabytki oraz dzieła sztuki w niecodziennych miejscach (stacja metra Toledo, olbrzymie
+                        murale widoczne choćby poniżej), trąbiące samochody, dla których sygnalizacja świetlna to
+                        dodatek podczas jazdy, pieszych, którzy przechodzą sobie środkiem ronda, tutejszych mieszkańców
+                        wzajemnie się przekrzykujących i mocno gestykulujących, otrzymamy wówczas definicję tego czym
+                        jest i
+                        jak wygląda Neapol. </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-img hero-img__naples">
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+            <p class="hero-img__title">Neapol się kocha lub nienawidzi za jego klimat</p>
+        </section>
+
+        <section class="section amalfi" id="amalfi">
+            <div class="amalfi__container container flex">
+                <div class="amalfi__box amalfi__box--first flex">
+                    <img src="../images/amalfi-coast640.jpg" alt="widok na wybrzeże Amalfitańskie"
+                        class="amalfi__box-img amalfi__box-img--small">
+                    <img src="../images/amalfi-coast1920.jpg" alt="widok na wybrzeże Amalfitańskie"
+                        class="amalfi__box-img amalfi__box-img--big">
+
+                    <div class="amalfi__box-content">
+                        <p class="amalfi__box-content-text">Ścieżka Bogów, czyli spacer z zaskakującym zakończeniem <i
+                                class="bx bx-heart"></i></p>
+                    </div>
+                </div>
+                <div class="amalfi__box amalfi__box--second">
+                    <h3 class="amalfi__box-header">Il Sentiero degli Dei, czyli blisko 7 kilometrowy spacer z
+                        przepięknymi widokami</h3>
+                    <p class="amalfi__box-description">Amalfi jest jednym z przepięknych, kolorowych miasteczek
+                        znajdujących się wzdłuż wybrzeża Amalfitańskiego. Oddalając się kilka kilometrów dalej można
+                        trafić do miejscowości Bomerano, w której to zaczyna się popularna Ścieżka Bogów z
+                        niezapomnianymi widokami. Sama trasa nie jest mocno wymagająca, natomiast ze względu na
+                        kamienie, warto ubrać solidniejsze obuwie. Spacer zaczynamy w bliskim sąsiedztwie lokalnych
+                        gajów cytrusowych i winnic, aby następnie móc podziwiać z wysokości morze. Idąc dalej, naszym
+                        oczom będą ukazywały się kolejne kolorowe miasteczka, kręte drogi, a finałem całej trasy jest
+                        pokonanie 1700 schodów, prowadzących do miasteczka o nazwie Positano.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-img hero-img__amalfi">
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+            <p class="hero-img__title">Amalfi podobnie jak całe wybrzeże zapiera dech w piersi</p>
+        </section>
+
+        <section class="section procida" id="procida">
+            <div class="procida__container container flex">
+                <div class="procida__box procida__box--first flex">
+                    <img src="../images/procida2-640.jpg" alt="widok na wybrzeże procidatańskie"
+                        class="procida__box-img procida__box-img--small">
+                    <img src="../images/procida2-1920.jpg" alt="widok na wybrzeże procidatańskie"
+                        class="procida__box-img procida__box-img--big">
+
+                    <div class="procida__box-content">
+                        <p class="procida__box-content-text">Procida, czyli 4km² autentycznego piękna <i
+                                class="bx bx-heart"></i></p>
+                    </div>
+                </div>
+                <div class="procida__box procida__box--second">
+                    <h3 class="procida__box-header">Kopciuszek w trio</h3>
+                    <p class="procida__box-description">Procida jest niewielką wyspą, jej powierzchnia to raptem 4km²,
+                        znajdująca się około 50 minut płynięcia promem, która od niedawna zaczęła przyciągać turystów do
+                        siebie. Sąsiaduje z Capri znaną z przepychu i olśniewającej urody oraz Ischią będącą największą
+                        wyspą w zatoce Neapolitańskiej, posiadającą w swoich zasobach Zamek Aragoński, prześliczne
+                        ogrody, czy też pozostałości po wulkanie. Stąd niesforne określenie w tytule. Mimo, iż Procidę
+                        można zwiedzić pieszo w ciągu jednego dnia, warto zatrzymać się w niej na dłużej. Miasteczko to
+                        czaruje swoją autentycznością, spokojem, fantastycznymi owocami morzami (głównym zajęciem
+                        mieszkańców jest rybołóstwo). Wygląd niektórych budynków, stare pojazdy i skutery dają
+                        złudzenie, jakby czas się zatrzymał, natomiast rozmowa z zawsze uprzejmymi i uśmiechniętymi
+                        mieszkańcami sprawia, że problemy wydają się ulatniać </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero-img hero-img__procida">
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+            <p class="hero-img__title">Życie na Procidzie zwalnia, przez co wydaje się być radosne i bezproblemowe</p>
+        </section>
+
+        <section class="section needtosee" id="needtosee">
+            <div class="needtosee__container">
+                <h2 class="needtosee__title">Co trzeba zobaczyć</h2>
+                <p class="needtosee__text">Poniżej przedstawione są miejsca, które naprawdę warto odwiedzić będąc w
+                    dowolnej z podanych lokalizacji. Lista ta jest w 100% subiektywna, gdyż duże miasta jak Neapol oraz
+                    Rzym posiadają tak dużą ilość ciekawych miejsc, robiących wrażenie, że zamknięcie listy w kilku
+                    pozycjach jest zwyczajnie niemożliwe. </p>
+                <div class="needtosee__cards">
+                    <div class="needtosee__card " onclick="void(0)">
+                        <div class="needtosee__card-img needtosee__card-img--rome">
+                            <h3 class="needtosee__card-img-title">Rzym</h3>
+                            <p class="needtosee__card-img-info"><i class='bx bx-chevrons-right'></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="needtosee__card-info needtosee__card-info--rome">
+                            <h3 class="needtosee__card-info-title">Rzym</h3>
+                            <ul class="needtosee__card-info-list">
+                                <li class="needtosee__card-info-list-item">Koloseum</li>
+                                <li class="needtosee__card-info-list-item">Watykan</li>
+                                <li class="needtosee__card-info-list-item">Stadio Olimpico</li>
+                                <li class="needtosee__card-info-list-item">Ołtarz Narodów</li>
+                                <li class="needtosee__card-info-list-item">Fontanna di Trevi</li>
+                                <li class="needtosee__card-info-list-item">Forum Romanum</li>
+                                <li class="needtosee__card-info-list-item">Ogród Pomarańczy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="needtosee__card" onclick="void(0)">
+                        <div class="needtosee__card-img needtosee__card-img--naples">
+                            <h3 class="needtosee__card-img-title">Neapol</h3>
+                            <p class="needtosee__card-img-info"><i class='bx bx-chevrons-right'></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="needtosee__card-info needtosee__card-info--naples">
+                            <h3 class="needtosee__card-info-title">Neapol</h3>
+                            <ul class="needtosee__card-info-list">
+                                <li class="needtosee__card-info-list-item">Muzeum Archeologiczne</li>
+                                <li class="needtosee__card-info-list-item">Pompeje</li>
+                                <li class="needtosee__card-info-list-item">Wezuwiusz</li>
+                                <li class="needtosee__card-info-list-item">Stacja metra Toledo</li>
+                                <li class="needtosee__card-info-list-item">Katakumby</li>
+                                <li class="needtosee__card-info-list-item">Pałac Królewski</li>
+                                <li class="needtosee__card-info-list-item">Cmentarz Fontanelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="needtosee__card" onclick="void(0)">
+                        <div class="needtosee__card-img needtosee__card-img--amalfi">
+                            <h3 class="needtosee__card-img-title">Amalfi</h3>
+                            <p class="needtosee__card-img-info"><i class='bx bx-chevrons-right'></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="needtosee__card-info needtosee__card-info--amalfi">
+                            <h3 class="needtosee__card-info-title">Amalfi</h3>
+                            <ul class="needtosee__card-info-list">
+                                <li class="needtosee__card-info-list-item">Ścieżka Bogów</li>
+                                <li class="needtosee__card-info-list-item">Amalfi</li>
+                                <li class="needtosee__card-info-list-item">Positano</li>
+                                <li class="needtosee__card-info-list-item">Ravello</li>
+                                <li class="needtosee__card-info-list-item">Fiord w Furore</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="needtosee__card" onclick="void(0)">
+                        <div class="needtosee__card-img needtosee__card-img--procida">
+                            <h3 class="needtosee__card-img-title">Procida</h3>
+                            <p class="needtosee__card-img-info"><i class='bx bx-chevrons-right'></i>Więcej informacji
+                            </p>
+                        </div>
+                        <div class="needtosee__card-info needtosee__card-info--procida">
+                            <h3 class="needtosee__card-info-title">Procida</h3>
+                            <ul class="needtosee__card-info-list">
+                                <li class="needtosee__card-info-list-item">Punkty widokowe w Procidzie</li>
+                                <li class="needtosee__card-info-list-item">Zamek Aragoński</li>
+                                <li class="needtosee__card-info-list-item">Capri</li>
+                                <li class="needtosee__card-info-list-item">Lazurowa Grota</li>
+                                <li class="needtosee__card-info-list-item">Villa Malaparte</li>
+                                <li class="needtosee__card-info-list-item">Góra Epomeo</li>
+                                <li class="needtosee__card-info-list-item">Terra Murrata</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tips" id="tips">
+            <div class="white-block white-block-right"></div>
+            <div class="tips__container container">
+                <h2 class="tips__header">Wskazówki dotyczące Włoch i Włochów</h2>
+                <p class="tips__text">Z racji tego, że Włosi charakterologicznie różnią się mocno od Polaków, pewne
+                    rzeczy podczas pierwszego pobytu w tym kraju mogą zaskoczyć. Poniżej zamieszczonych jest kilka
+                    wskazówek, które może nikomu życia nie uratują, ale zwyczajnie warto mieć je gdzieś z tyłu głowy.
+                </p>
+                <div class="swiper tipsSwiper tips__box">
+                    <div class="swiper-wrapper tips__content">
+                        <p class="swiper-slide tips__tip">Włochy są krajem bardzo dobrze skomunikowanym torowo. Pociągi
+                            jeżdżą bardzo punktualnie, nie można narzekać na warunki w przedziałach i trzeba mieć to na
+                            uwadze przychodząc na dworzec na ostatnią chwilę. </p>
+                        <p class="swiper-slide tips__tip">Zupełnym przeciwieństwem jest komunikacja autobusowa,
+                            zwłaszcza w mniejszych miasteczkach. Idąc na przystanek trzeba liczyć się z tym, że kierowca
+                            autobusu przyjedzie wtedy, kiedy uzna to za słuszne. Przystanki autobusowe również są tutaj
+                            "na słowo honoru", bo nawet lokalni mieszkańcy nie zawsze wiedzą, gdzie autobus się
+                            zatrzymuje. </p>
+                        <p class="swiper-slide tips__tip">Będąc w Rzymie trzeba mocno uważać w metrze, ponieważ turyści
+                            w tak tłocznym miejscu są idealnym kąskiem dla kieszonkowców. Dodatkowo warto być asertywnym
+                            wobec bardzo kreatywnych naciągaczy.</p>
+                        <p class="swiper-slide tips__tip">Włosi potrafią uśmiechać się do nieznajomej osoby mijając ją
+                            na ulicy i jest to dla nich zupełnie normalne.</p>
+                        <p class="swiper-slide tips__tip">Wchodząc do kawiarni / restauracji postaraj się użyć nawet
+                            najbardziej oczywistych włoskich słów. Włosi bardzo doceniają jeżeli ktoś stara mówić się w
+                            ich języku, nawet wówczas, gdy wychodzi to kwadratowo.</p>
+                        <p class="swiper-slide tips__tip">Warto zrobić mały research i znaleźć restaurację, w której
+                            jedzą lokalni mieszkańcy. Wyglądem nie będzie robiła wielkiego wrażenia, ale panująca w
+                            środku atmosfera, gwar wynikający z przekrzykujących się Włochów jest wspaniały. Jedzenie w
+                            takich miejscach też jest jeszcze lepsze.</p>
+                        <p class="swiper-slide tips__tip">Włosi siedząc w restauracji nie ograniczają się do rozmów z
+                            osobami, z którymi siedzą przy stole. W mniejszych miasteczkach często zdarza się, że ludzie
+                            rozmawiają ze sobą "przez stoły" albo przesiadają się na chwilę, aby zakończyć temat
+                            rozmowy.</p>
+                        <p class="swiper-slide tips__tip">Widok zatrzymującego się na ulicy Włocha, włączającego światła
+                            awaryjne i wychodzącego do pobliskiego sklepu nie powinien Cię dziwić. Zator, który
+                            spowodował sam się rozładuje przy salwach klaksonów lub wtedy kiedy kierowca wróci do
+                            samochodu i pojedzie dalej.</p>
+                        <p class="swiper-slide tips__tip">W mniejszych miasteczkach należy liczyć się z tym, że Włosi
+                            mają siestę w godzinach popołudniowych i wiele punktów usługowych czy gastronomicznych jest
+                            wtedy zamknięta</p>
+                        <p class="swiper-slide tips__tip">Prawdziwa Włoska kolacja zamawiana w restauracji składa się z
+                            przystawki, dania pierwszego, którym może być makaron, risotto lub zupa, z dania głównego, a
+                            także z deseru. Taka kolacja może trwać dobrych kilka godzin</p>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <a href="#home" class="scroll-up flex hide"><i class='bx bx-up-arrow-alt'></i></a>
+                </div>
+        </section>
 
 
     </main>
-
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <!-- main.js -->
