@@ -22,6 +22,7 @@ $card-bg: #333;
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
+	scroll-padding-top: 10rem;
 }
 
 body,
@@ -63,7 +64,6 @@ li {
 	display: none;
 }
 
-
 .white-block {
 	position: absolute;
 	height: 4rem;
@@ -89,7 +89,7 @@ li {
 	position: fixed;
 	top: 0;
 	left: 0;
-	height:5rem;
+	height: 10rem;
 	width: 100%;
 	z-index: 100;
 	background-color: $black-color;
@@ -529,7 +529,12 @@ li {
 	overflow: hidden;
 
 	&__container {
+		width: 100%;
 		max-width: 120rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__header {
@@ -544,37 +549,43 @@ li {
 		max-width: 100rem;
 		margin: 0 auto;
 		text-align: justify;
-		padding-bottom: 5rem;
+		padding-bottom: 3rem;
 		font-size: 1.4rem;
+	}
+
+	&__mleko {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		max-width: 1200px;
+		padding: 1rem 0;
 	}
 
 	&__box {
-		width: 50%;
-		height: 100%;
-		background-color: #f00;
-	}
-
-	&__content {
-		width: 100%;
-		max-width: 120rem;
-		display: flex;
-		align-items: center;
+		margin: 0 1rem;
+		overflow: hidden;
 	}
 
 	&__tip {
-		width: 100%;
-		max-width: 40rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 50rem;
+		padding: 1rem;
 		font-size: 1.4rem;
 		text-align: center;
-		margin-bottom: 5rem;
 		background-color: $white-color;
-		padding: 1rem;
 		border-radius: 10px;
 		box-shadow: 3px 3px 3px #2e2e2e;
 		transition: transform 0.3s;
+		z-index: 10;
 
 		&:hover {
 			transform: scale(0.95);
+		}
+
+		p {
+			padding: 1rem;
 		}
 	}
 
@@ -588,6 +599,7 @@ li {
 		border: 1px solid $black-color;
 		border-radius: 50%;
 		padding: 1.5rem;
+		z-index: 100;
 
 		i {
 			font-size: 2rem;
@@ -595,30 +607,15 @@ li {
 		}
 	}
 }
-// .swiper {
-// 	width: 100%;
-// 	height: 100%;
-// 	overflow: hidden;
-// }
 
-// .swiper-wrapper {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
+.footer {
+	width: 100%;
 
-// .swiper-slide {
-// 	padding: 3rem;
-// 	width: 25rem;
-// 	max-width: 30rem;
-// 	text-align: center;
-// 	font-size: 18px;
-// 	background: #fff;
-// 	margin: 0 auto;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
+	&__container {
+		
+	}
+}
+
 /////////////////////////////////////////////
 /////////////////Media QUERIES///////////////
 /////////////////////////////////////////////
@@ -734,10 +731,25 @@ li {
 		&__text {
 			font-size: 1.6rem;
 		}
+
+		&__mleko {
+			padding: 3rem;
+		}
+		
+		&__tip {
+			font-size: 1.6rem;
+			p {
+				padding: 2rem;
+			}
+		}
 	}
 }
 
 @media screen and (min-width: 768px) {
+	html {
+		scroll-padding-top: 12rem;
+	}
+
 	.header {
 		height: 12rem;
 	}
