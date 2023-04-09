@@ -612,7 +612,68 @@ li {
 	width: 100%;
 
 	&__container {
-		
+		width: 100%;
+		max-width: 120rem;
+	}
+
+	&__boxes {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 1rem;
+		font-size: 1.4rem;
+
+		&__two {
+			// display: none;
+		}
+	}
+
+	&__logo {
+		padding: 2rem 0;
+		font-size: 2.4rem;
+		font-family: 'Raleway', sans-serif;
+		font-weight: $font-semi-bold;
+	}
+
+	&__text {
+		padding: 1rem;
+		text-align: justify;
+	}
+
+	&__cities {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 2rem;
+	}
+
+	&__city-title {
+		font-size: 2rem;
+		font-weight: $font-semi-bold;
+		padding-bottom: 3rem;
+	}
+
+	&__city {
+		margin: 2rem 0;
+		padding: 1rem 2rem;
+		color: $black-color;
+		font-weight: 300;
+		border-bottom: 1px solid $black-color;
+		transition: 0.5s;
+	}
+
+	&__bottom-text {
+		margin-top: 2rem;
+		padding: 0.5rem;
+		font-size: 1.2rem;
+		text-align: center;
+		border-top: 2px solid #ddd;
 	}
 }
 
@@ -735,7 +796,7 @@ li {
 		&__mleko {
 			padding: 3rem;
 		}
-		
+
 		&__tip {
 			font-size: 1.6rem;
 			p {

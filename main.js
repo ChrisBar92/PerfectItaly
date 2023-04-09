@@ -31,11 +31,11 @@ window.onscroll = () => {
 	}
 }
 
-const handleCurrentYear = () => {
-	const year = new Date().getFullYear()
-	footerYear.innerText = year
-}
-handleCurrentYear()
+// const handleCurrentYear = () => {
+// 	const year = new Date().getFullYear()
+// 	footerYear.innerText = year
+// }
+// handleCurrentYear()
 
 ///////////////////////////
 
@@ -80,12 +80,6 @@ let swiper = new Swiper('.tips__box', {
 			slidesPerView: 3,
 		},
 	},
-})
-
-navLinks.forEach(link => {
-	link.addEventListener('click', () => {
-		console.log(scrollY)
-	})
 })
 
 ///////////////////////////
