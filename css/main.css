@@ -27,6 +27,10 @@ body {
   height: 200vh;
 }
 
+main {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -322,6 +326,7 @@ li {
 
 .hero-img {
   position: relative;
+  width: 100%;
   padding: 20rem 2rem;
   background-size: cover;
   background-position: center;
@@ -332,6 +337,7 @@ li {
 }
 .hero-img__rome {
   background-image: url("/images/rzym-paralaksa1920.jpg");
+  overflow: hidden;
 }
 .hero-img__naples {
   background-image: url("/images/neapol-qs1920.jpg");
@@ -587,7 +593,7 @@ li {
   padding: 0 2rem;
 }
 .footer__city-title {
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 600;
   padding-bottom: 3rem;
 }
@@ -595,6 +601,7 @@ li {
   margin: 2rem 0;
   padding: 1rem 2rem;
   color: #000;
+  font-size: 1.8rem;
   font-weight: 300;
   border-bottom: 1px solid #000;
   transition: 0.5s;
@@ -728,6 +735,24 @@ li {
   .tips__tip p {
     padding: 2rem;
   }
+  .footer__logo {
+    font-size: 2.8rem;
+  }
+  .footer__text {
+    padding: 2rem 3rem;
+    font-size: 1.6rem;
+  }
+  .footer__city-title {
+    font-size: 2.6rem;
+  }
+  .footer__cities {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem;
+  }
+  .footer__city {
+    margin: 2rem;
+  }
 }
 @media screen and (min-width: 768px) {
   html {
@@ -810,6 +835,12 @@ li {
     width: 45%;
     max-width: 35rem;
     margin: 3rem 1rem;
+  }
+  .footer__bottom-text {
+    font-size: 1.4rem;
+  }
+  .footer__logo {
+    padding: 4rem 0;
   }
 }
 @media screen and (min-width: 992px) {
@@ -899,6 +930,18 @@ li {
   }
   .tips__text {
     font-size: 1.8rem;
+  }
+  .footer__logo {
+    font-size: 3rem;
+  }
+  .footer__text {
+    font-size: 1.8rem;
+  }
+  .footer__city-title {
+    font-size: 2.8rem;
+  }
+  .footer__city {
+    font-size: 2rem;
   }
 }
 @media screen and (min-width: 1200px) {
