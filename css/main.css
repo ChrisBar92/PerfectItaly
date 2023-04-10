@@ -336,17 +336,17 @@ li {
   overflow: hidden;
 }
 .hero-img__rome {
-  background-image: url("/images/rzym-paralaksa1920.jpg");
+  background-image: url("../images/rzym-paralaksa1920.jpg");
   overflow: hidden;
 }
 .hero-img__naples {
-  background-image: url("/images/neapol-qs1920.jpg");
+  background-image: url("../images/neapol-qs1920.jpg");
 }
 .hero-img__amalfi {
-  background-image: url("/images/amalfi-miasto1920.jpg");
+  background-image: url("../images/amalfi-miasto1920.jpg");
 }
 .hero-img__procida {
-  background-image: url("/images/procida-miasto1920.jpg");
+  background-image: url("../images/procida-miasto1920.jpg");
 }
 .hero-img__title {
   max-width: 100rem;
